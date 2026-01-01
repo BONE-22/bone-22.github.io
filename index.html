@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>像素馬奔跑遊戲 - 2026 賀歲版</title>
+    <title>2026 馬年賀歲版</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+KuaiLe&family=Press+Start+2P&display=swap');
@@ -129,8 +129,8 @@
 </head>
 <body>
 
-    <h1 id="game-title">🧧 靈馬迎春：福滿乾坤 🐎</h1>
-    <div class="info" id="game-status">跳躍：[空白鍵] | 距離 1500 進入星空模式</div>
+    <h1 id="game-title">🧧🐎🧧🐎🧧</h1>
+    <div class="info" id="game-status">距離 1500 進入星空模式</div>
 
     <div id="game-container" onclick="handleClick()">
         <canvas id="gameCanvas" width="800" height="250"></canvas>
@@ -308,7 +308,7 @@
             if (distance >= 1500 && !isNight) {
                 isNight = true;
                 body.classList.add('is-night');
-                statusText.innerText = "✨ 深夜奔騰：星光熠熠 ✨";
+                statusText.innerText = "距離 2026 進入飛馬模式";
                 initStars();
             }
 
@@ -316,7 +316,7 @@
             if (distance >= 2026 && !isAwakened) {
                 isAwakened = true; 
                 body.classList.add('awakened'); 
-                title.innerText = "🌟 新春大吉：萬事如意 🌟";
+                title.innerText = "🌟 新春大吉🌟";
                 awakeningFireworkTimer = 100; 
             }
 
@@ -408,8 +408,8 @@
             distance = 0; frame = 0; nextObstacleFrame = 100; obstacles.length = 0; fireworks.length = 0; 
             horse.y = horse.groundY; horse.dy = 0; horse.grounded = true; horse.ducking = false;
             gameActive = true; isNight = false; isAwakened = false; awakeningFireworkTimer = 0; gameOverFrameCount = 0;
-            body.classList.remove('is-night', 'awakened'); title.innerText = "🧧 靈馬迎春：福滿乾坤 🐎";
-            statusText.innerText = "跳躍：[空白鍵] | 距離 1500 進入星空模式";
+            body.classList.remove('is-night', 'awakened'); title.innerText = "🧧🐎🧧🐎🧧";
+            statusText.innerText = "距離 1500 進入星空模式";
             distanceDisplay.innerText = formatNumber(0); restartBtn.style.display = 'none';
         }
 
